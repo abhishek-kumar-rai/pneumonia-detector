@@ -35,14 +35,15 @@
 }
 .navbar ul li a{
     text-decoration: none;
-    color:rgb(43, 142, 235);
+    color:rgb(165, 70, 255);
     text-transform: uppercase;
+    font-weight: bold;
 }
 .navbar ul li ::after{
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: #2dff3f;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -62,56 +63,12 @@
 .content h1{
     font-size: 5vw;
 
-  text-shadow: 0 0 5px #b146f0, 0 0 15px #b146f0, 0 0 20px #b146f0, 0 0 40px #b146f0, 0 0 60px #6d00ac, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
+    text-shadow: 0 0 5px #b146f0, 0 0 15px #b146f0, 0 0 20px #b146f0, 0 0 40px #b146f0, 0 0 60px #4c01d8, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #c3a9ff;
   font-family: "Sacramento", cursive;
   text-align: center;
-  animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
 }
-@-webkit-keyframes blink {
-    20%,
-    24%,
-    55% {
-      color: #111;
-      text-shadow: none;
-    }
-  
-    0%,
-    19%,
-    21%,
-    23%,
-    25%,
-    54%,
-    56%,
-    100% {
-  
-    text-shadow: 0 0 5px #b146f0, 0 0 15px #b146f0, 0 0 20px #b146f0, 0 0 40px #b146f0, 0 0 60px #5a00ad, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-      color: #b68df8;
-    }
-  }
-  
-  @keyframes blink {
-    20%,
-    24%,
-    55% {
-      color: #111;
-      text-shadow: none;
-    }
-  
-    0%,
-    19%,
-    21%,
-    23%,
-    25%,
-    54%,
-    56%,
-    100% {
- 
-    text-shadow: 0 0 5px #b146f0, 0 0 15px #b146f0, 0 0 20px #b146f0, 0 0 40px #b146f0, 0 0 60px #4c01d8, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-      color: #c3a9ff;
-    }
-  }
+
 
   
 input[type=submit] {
@@ -142,7 +99,7 @@ button{
     position: relative;
     overflow: hidden;
 }
-span{
+/* span{
     width: 0;
     height: 100%;
     background: rgb(113, 255, 57);
@@ -152,9 +109,10 @@ span{
     bottom: 0;
     z-index: -1;
     transition: 0.50s;
-}
+} */
 input[type="submit"]:hover{
-    border: none;
+    /* border: none; */
+    border-color: rgb(113, 255, 57);
     background-color: rgb(113, 255, 57);
 }
 
@@ -162,15 +120,16 @@ button:hover span{
     width: 100%;
 }
 button:hover{
-    border: none;
+  border-color: rgb(113, 255, 57);
+  background-color: rgb(113, 255, 57);
 }
 input::file-selector-button {
     background-image: linear-gradient(
       to right,
-      #ff7a18,
-      #af002d,
-      #319197 100%,
-      #319197 200%
+      #8400ff,
+      #a41bff,
+      #e77dfc 100%,
+      #42ff7b 200%
     );
     background-position-x: 0%;
     background-size: 200%;
@@ -186,3 +145,87 @@ input::file-selector-button:hover {
     transform: scale(1.0);
 }
 
+@media screen and (max-width: 768px) {
+  .navbar {
+      width: 90%;
+  }
+
+  .content h1 {
+      font-size: 7vw;
+  }
+  .content form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(145, 145, 145);
+    line-height: 1.6;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.993),rgba(0, 0, 0, 0.75)),url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style the container for the "About" section */
+section#about {
+  
+    padding: 40px 0;
+}
+
+/* Style the main headings */
+h2, h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Add some spacing between paragraphs */
+p {
+    margin-bottom: 15px;
+}
+
+/* Center the thank you message */
+p.text-center {
+    text-align: center;
+}
+
+
+
+/* Style the container for the main content */
+.container {
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* Style the back button */
+.btn-back {
+  position: absolute;
+  font-family: cursive;
+  top: 20px;
+  left: 10px;
+  display: inline-block;
+  padding: 20px 10px;
+  text-decoration: underline;
+  border-radius: 20px;
+  color: tomato;
+  font-size: 20px;
+
+}
+
+
+
+.py-5{
+  border-radius: 20px;
+}
+
+  

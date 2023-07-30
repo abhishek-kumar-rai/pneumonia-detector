@@ -15,7 +15,7 @@ def home(request):
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            status = "File uploaded successful"
+            status = "File uploaded successfully"
    
     form = ImageForm()
     img = SampleImage.objects.all()
@@ -23,8 +23,10 @@ def home(request):
     img = img[x]
    
     return render(request, 'home.html', {'status':status, 'img':img, 'form':form})
+
 def about(request):
     return render(request, 'about.html')
+
 def output(request):
     
     img = SampleImage.objects.all()
@@ -38,7 +40,9 @@ def output(request):
     image_size = 32
     test_sample = cv2.resize(xray_image, (image_size, image_size),interpolation = cv2.INTER_AREA).reshape(1,-1)
     result = knn_model.predict(test_sample)
+    result = result[0]
     print(result)
+    img.delete()
     shutil.rmtree('media')
 
     return render(request, 'output.html',{'result':result})

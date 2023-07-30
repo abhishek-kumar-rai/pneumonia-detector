@@ -1,1 +1,70 @@
-this is my about page
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Add your custom CSS styles or link to an external CSS file here -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+
+<!-- Start of About Section -->
+<section id="about">
+    <div class="container py-5">
+        <h2 class="text-center mb-4">About Pneumonia Detection Application</h2>
+
+        <!-- Vision Section -->
+        <h3>Our Vision</h3>
+        <p>
+            Our vision is to contribute to the early diagnosis of pneumonia and improve patient outcomes through the use of advanced machine learning techniques. By leveraging the power of artificial intelligence, we aim to assist healthcare professionals in making accurate and timely decisions when diagnosing patients with pneumonia.
+        </p>
+
+        <!-- How It Works Section -->
+        <h3>How It Works</h3>
+        <p>
+            Our application utilizes the k-Nearest Neighbors (kNN) algorithm, a powerful and interpretable machine learning technique, to predict whether a given chest X-ray image indicates the presence of pneumonia. The kNN algorithm identifies similar images from the training dataset and assigns the most common class label among those neighbors to the test image. This process allows us to make accurate predictions based on the collective knowledge of previously labeled images.
+        </p>
+
+        <!-- User-Friendly Interface Section -->
+        <h3>User-Friendly Interface</h3>
+        <p>
+            We believe that technology should be accessible to everyone, including healthcare professionals, researchers, and patients. Therefore, we have designed a user-friendly interface that allows users to easily upload chest X-ray images and obtain quick results. With just a few clicks, our application can assist in identifying potential pneumonia cases, enabling healthcare providers to take appropriate actions promptly.
+        </p>
+
+        <!-- Data Privacy and Security Section -->
+        <h3>Data Privacy and Security</h3>
+        <p>
+            At Pneumonia Detection Application, we prioritize the privacy and security of our users' data. Rest assured that all the uploaded images are processed locally, and we do not store any user data on our servers. Your privacy is of utmost importance to us.
+        </p>
+
+        <!-- Disclaimer Section -->
+        <h3>Disclaimer</h3>
+        <p>
+            While our application provides valuable insights, it is essential to remember that it is not a replacement for professional medical advice. The final diagnosis and treatment decisions should always be made by qualified healthcare professionals based on a comprehensive assessment of the patient's condition.
+        </p>
+
+        <!-- Future Developments Section -->
+        <h3>Future Developments</h3>
+        <p>
+            We are committed to continuous improvement and development. Our team of researchers and engineers is actively working on enhancing the application's performance, exploring new algorithms, and expanding the dataset to cover a broader range of cases. We strive to remain at the forefront of cutting-edge technology in the field of medical image analysis.
+        </p>
+
+        <p class="text-center mt-4">
+            Thank you for choosing Pneumonia Detection Application. Together, let's make a positive impact on the early detection and management of pneumonia cases.
+        </p>
+        <div class="text-center mt-4">
+            <a href="javascript:history.back()" class="btn-back"><i class="fas fa-arrow-left"></i>  Back</a>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        
+    </div>
+</section>
+<!-- End of About Section -->
+
+<!-- Add Bootstrap JS and other scripts if necessary -->
+
+</body>
+</html>

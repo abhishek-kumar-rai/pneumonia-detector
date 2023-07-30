@@ -30,12 +30,12 @@
           <div class = "column" style="text-align:center;" >
             {% comment %} {% for x in img%} {% endcomment %}
             <h2> {{status}} </h2> <br>
-            
+            {% if status %}
+            <img src="{{img.sample.url}}" alt ="" class = "img-responsive" height="150px" width = "150px">
+            {% endif %}
           </div>
-        <button type="submit" onclick="location.href='output'" class="btn btn-outline-success" enctype="multipart/form-data"><span></span>Classify</button>
+        <button type="submit" {%if status %} onclick="location.href='output'"{% endif %} class="btn btn-outline-success" enctype="multipart/form-data"><span></span>Classify</button>
       </div>
-
-      
 
     </div>
   
